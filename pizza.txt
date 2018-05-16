@@ -1,0 +1,27 @@
+CLIENT(ID,NOM,PRENOM)
+POST http://pizzeria/clients?id=1&nom=dupont&prenom=pierre
+
+PIZZA(ID,LIBELLE,REFERENCE,PRIX,URL_IMAGE)
+POST http://pizzeria/pizzas?id=&libelle=vegan&prix=1.2&url%95%image=
+
+LIVREUR(ID,NOM,PRENOM)
+POST http://pizzeria/liveurs?id=1&nom=Dumoulin&prenom=franciscus
+
+COMMANDE(ID,NUMERO_COMMANDE,DATE_COMMANDE,LIVREUR_ID,CLIENT_ID)
+POST http://pizzeria/commandes?id=1&numero%95%commande=1&date%95%commande=2018.05.14&livreur%95%id=1&client%95%=1
+
+COMMANDE_PIZZA(COMMANDE_ID,PIZZA_ID)
+PUT http://pizzeria/commande%95%pizza
+
+lire tous les clients
+GET http://pizzeria.com/clients
+
+lire un seul client 
+GET http://pizzeria.com/clients/123
+
+mettre a jour un client 
+PUT http://pizzeria.com/clients/123/nom
+
+suppression d'un client
+DELETE http://pizzeria.com/clients/123 
+
